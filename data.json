@@ -1,6 +1,10 @@
 {
     "annual": "12",
-    "title": "start",
+    "kecelakaan": "0.50",
+    "kematian": "0.30",
+    "biaya_jabatan": "5",
+    "iuran_pensiun": "200000",
+    "iuran_jaminan_hari_tua": "160000",
     "personal_income_taxs": [
         {
             "lv1": "5"
