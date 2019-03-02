@@ -1,6 +1,6 @@
 # TAXPPH21 APPLICATION
 
-                                                                             ## TECH_DEV_TEST_IVANDI DJOH GAH 
+                                                                             TECH_DEV_TEST_IVANDI DJOH GAH 
 
 ## ABOUT THE PROGRAM
    This Program was made to Answer the Question of the Recruiters about Indonesia's Income Taxation. 
