@@ -159,7 +159,7 @@ $(document).ready(function () {
                 }
 
                 var selectedDependent = getDependent(dependent);
-                var annualDependent = annualIncomeNum - selectedDependent;
+                var annualDependent = ((grossMonthlyNum - reduction)*12) - selectedDependent;
 
                 if (annualDependent >= 0 && annualDependent <= salary1Num) {
                     var stepDependent1 = annualIncomeNum - selectedDependent;
@@ -198,10 +198,20 @@ $(document).ready(function () {
                     }
                 }
 
-                $("#grossMonthly").val(monthlyIncomeNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#grossMonthly").val(monthlyIncomeNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#annualTaxable").val(annualDependent.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#grossAnnual").val(annualIncomeNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#annualTax").val(finalResult.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
+                $("#grossMonthly").val(grossMonthlyNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#grossAnnual").val((grossMonthlyNum*12).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#annualTaxable").val(annualDependent.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                $("#grossAnnual").val(annualIncomeNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#netMonthly").val((grossMonthlyNum - reduction).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#netAnnual").val(((grossMonthlyNum - reduction)*12).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#annualTax").val(finalResult.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#jkk").val(getJkkNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#jkm").val(getJkmNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#biayaJabatan").val(biayaJabatanNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
             } else {
 
@@ -211,11 +221,14 @@ $(document).ready(function () {
 
                 } else if (netAnnualIncomeNum > salary1Num && netAnnualIncomeNum <= salary2Num) {
                     var stepNoDependent1 = getPercentage(salary1Num, taxRate1Num);
+                    console.log('test1', getPercentage(netAnnualIncomeNum, taxRate1Num))
 
                     if ((netAnnualIncomeNum - salary1Num) > 0) {
                         var stepNoDependent2 = netAnnualIncomeNum - salary1Num;
                         var stepNoDependent3 = getPercentage(stepNoDependent2, taxRate2Num);
                         var finalResult = stepNoDependent1 + stepNoDependent3;
+                        console.log('test2', stepNoDependent1)
+                        console.log('test2', stepNoDependent3)
                     }
 
                 } else if (netAnnualIncomeNum > salary2Num && netAnnualIncomeNum <= salary3Num) {
@@ -246,16 +259,13 @@ $(document).ready(function () {
 
                 $("#grossMonthly").val(grossMonthlyNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#grossAnnual").val((grossMonthlyNum*12).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                $("#annualTaxable").val(((grossMonthlyNum - reduction)*12 - parseInt(data.tax_reliefs[0].tk0)).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#netMonthly").val((grossMonthlyNum - reduction).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#netAnnual").val(((grossMonthlyNum - reduction)*12).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#annualTax").val(finalResult.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#jkk").val(getJkkNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#jkm").val(getJkmNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#biayaJabatan").val(biayaJabatanNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-
-
-                
-                console.log(iuranPensiunNum + iuranJaminanHariTuaNum + biayaJabatanNum)
                 
             }
         });
