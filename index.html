@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TAX CALCULATION</title>
+    <link rel="shortcut icon" href="https://idevolusi.com/assets/images/logo-kecil2-128x128.png" type="image/x-icon">
+
+    <!-- Customs Style -->
+    <link rel="stylesheet" href="css/cosmo.bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">PPH21 - Calculation</a>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mt-3">
+                <h2 class="mb-3">Personal</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Fullname..." autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="npwp">NPWP Number</label>
+                        <input type="number" class="form-control" id="npwp" placeholder="NPWP Number..." required>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input type="checkbox" class="form-check-input" id="allowence">
+                        <label class="form-check-label" for="allowence">Allowence</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status" disabled>
+                            <option value="unset" selected>Select status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dependent">Dependents</label>
+                        <select class="form-control" id="dependent" disabled>
+                            <option value="unset" selected>Select dependent</option>
+                            <option value="tk0">TK0 - Single with no dependent</option>
+                            <option value="k0">K0 - Married with no dependent</option>
+                            <option value="k1">K1 - Married with 1 dependent</option>
+                            <option value="k2">K2 - Married with 2 dependent</option>
+                            <option value="k3">K3 - Married with 3 dependent</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-3">
+                <h2 class="mb-3">Income</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="monthlyIncome">Monthly Income</label>
+                        <input type="text" class="form-control" id="monthlyIncome" placeholder="Monthly income..." autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="grossMonthly">Gross Monthly</label>
+                        <input type="text" class="form-control" id="grossMonthly" placeholder="Gross monthly..."
+                            readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="grossAnnual">Gross Annual</label>
+                        <input type="text" class="form-control" id="grossAnnual" placeholder="Gross annual..."
+                            readonly>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-3">
+                <h2 class="mb-3">PPH21</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="annualTaxable">Annual taxable income</label>
+                        <input type="text" class="form-control" id="annualTaxable" placeholder="Annual taxable..."
+                            readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="annualTax">Annual Tax on this Income</label>
+                        <input type="text" class="form-control" id="annualTax" placeholder="Annual tax..." readonly>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-12">
+                <button id="calculate" class="btn btn-primary">Calculate</button>
+                <button id="reset" class="btn btn-warning ml-3">Reset</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap Js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Customs Js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
