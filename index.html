@@ -19,103 +19,106 @@
     </nav>
 
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mt-3">
-                <h2 class="mb-3">Personal</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Fullname..." autocomplete="off" required>
-                    </div>    
-                    <div class="form-group">
-                        <label for="monthlyIncome">Biaya Jabatan</label>
-                        <input type="text" class="form-control" id="biayaJabatan" placeholder="Biaya Jabatan..." autocomplete="off">
-                    </div>                              
-                    <div class="form-check mb-2">
-                        <input type="checkbox" class="form-check-input" id="allowence">
-                        <label class="form-check-label" for="allowence">Allowence Check</label>
-                    </div>
-                    <div class="form-group">
-                        <label for="status">Marital Status</label>
-                        <select class="form-control" id="status" disabled>
-                            <option value="unset" selected>Select status</option>
-                            <option value="single">Single</option>
-                            <option value="married">Married</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dependent">Dependents</label>
-                        <select class="form-control" id="dependent" disabled>
-                            <option value="unset" selected>Select dependent</option>
-                            <option value="tk0">TK0 - Single with no dependent</option>
-                            <option value="k0">K0 - Married with no dependent</option>
-                            <option value="k1">K1 - Married with 1 dependent</option>
-                            <option value="k2">K2 - Married with 2 dependent</option>
-                            <option value="k3">K3 - Married with 3 dependent</option>
-                        </select>
-                    </div>
-                </form>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mt-3">
+                    <h2 class="mb-3">Personal</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Fullname..." autocomplete="off"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="biayaJabatan">Biaya Jabatan</label>
+                            <input type="text" class="form-control" id="biayaJabatan" placeholder="Biaya Jabatan..." autocomplete="off" readonly>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="allowence">
+                            <label class="form-check-label" for="allowence">Allowence Check</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Marital Status</label>
+                            <select class="form-control" id="status" disabled>
+                                <option value="unset" selected>Select status</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dependent">Dependents</label>
+                            <select class="form-control" id="dependent" disabled>
+                                <option value="unset" selected>Select dependent</option>
+                                <option value="tk0">TK0 - Single with no dependent</option>
+                                <option value="k0">K0 - Married with no dependent</option>
+                                <option value="k1">K1 - Married with 1 dependent</option>
+                                <option value="k2">K2 - Married with 2 dependent</option>
+                                <option value="k3">K3 - Married with 3 dependent</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-3">
+                    <h2 class="mb-3">Income</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="monthlyIncome">Monthly Income</label>
+                            <input type="text" class="form-control" id="monthlyIncome" placeholder="Monthly income..."
+                                autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="jkk">Premi Jaminan Kecelakaan Kerja</label>
+                            <input type="text" class="form-control" id="jkk" placeholder="Jaminan Kecelakaan Kerja"
+                                disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="jkm">Premi Jaminan Kematian</label>
+                            <input type="text" class="form-control" id="jkm" placeholder="Jaminan Kecelakaan Kerja"
+                                disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="grossMonthly">Gross Income (Monthly)</label>
+                            <input type="text" class="form-control" id="grossMonthly" placeholder="Gross monthly..."
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="grossAnnual">Gross Income (Annualy)</label>
+                            <input type="text" class="form-control" id="grossAnnual" placeholder="Gross annual..." readonly>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="netMonthly">Net Income (Monthly)</label>
+                            <input type="text" class="form-control" id="netMonthly" placeholder="Net Income (Monthly)..."
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="netAnnual">Net Income (Annualy)</label>
+                            <input type="text" class="form-control" id="netAnnual" placeholder="Net Income (Annualy)..."
+                                readonly>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-3">
+                    <h2 class="mb-3">PPH21</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="annualTaxable">Annual taxable income</label>
+                            <input type="text" class="form-control" id="annualTaxable" placeholder="Annual taxable..."
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="annualTax">Annual Tax on this Income</label>
+                            <input type="text" class="form-control" id="annualTax" placeholder="Annual tax..." readonly>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="col-lg-12">
+                    <button id="calculate" class="btn btn-primary">Calculate</button>
+                    <button id="reset" class="btn btn-warning ml-3">Reset</button>
+                </div>
+    
             </div>
-            <div class="col-lg-4 col-md-6 mt-3">
-                <h2 class="mb-3">Income</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="monthlyIncome">Monthly Income</label>
-                        <input type="text" class="form-control" id="monthlyIncome" placeholder="Monthly income..." autocomplete="off">
-                    </div>                    
-                    <div class="form-group">
-                        <label for="npwp">Premi Jaminan Kecelakaan Kerja</label>
-                        <input type="number" class="form-control" id="jkk" placeholder="Jaminan Kecelakaan Kerja" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="npwp">Premi Jaminan Kecelakaan Kerja</label>
-                        <input type="number" class="form-control" id="jkm" placeholder="Jaminan Kecelakaan Kerja" disabled>
-                    </div>                                     
-                    <div class="form-group">
-                        <label for="grossMonthly">Gross Income (Monthly)</label>
-                        <input type="text" class="form-control" id="grossMonthly" placeholder="Gross monthly..."
-                            readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="grossAnnual">Gross Income (Annualy)</label>
-                        <input type="text" class="form-control" id="grossAnnual" placeholder="Gross annual..."
-                            readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="grossMonthly">Net Income (Monthly)</label>
-                        <input type="text" class="form-control" id="netMonthly" placeholder="Net Income (Monthly)..."
-                            readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="grossAnnual">Net Income (Annualy)</label>
-                        <input type="text" class="form-control" id="netAnnual" placeholder="Net Income (Annualy)..."
-                            readonly>
-                    </div>                    
-                </form>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-3">
-                <h2 class="mb-3">PPH21</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="annualTaxable">Annual taxable income</label>
-                        <input type="text" class="form-control" id="annualTaxable" placeholder="Annual taxable..."
-                            readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="annualTax">Annual Tax on this Income</label>
-                        <input type="text" class="form-control" id="annualTax" placeholder="Annual tax..." readonly>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-lg-12">
-                <button id="calculate" class="btn btn-primary">Calculate</button>
-                <button id="reset" class="btn btn-warning ml-3">Reset</button>
-            </div>
-
         </div>
-    </div>
 
     <!-- Bootstrap Js -->
     <script src="js/jquery.min.js"></script>
