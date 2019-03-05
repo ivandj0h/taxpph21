@@ -58,12 +58,13 @@ $(document).ready(function () {
         $("#calculate").click(function () {
             if ($("#name").val() == '') {
                 $("#name").addClass('is-invalid');
-                //$("#biayaJabatan").addClass('is-invalid');
-                //$("#monthlyIncome").addClass('is-invalid');
-
+                // return
+            } else if ($("#npwp").val() == '') {
+                $("#npwp").addClass('is-invalid');
+                return
             } else if ($("#monthlyIncome").val() == '') {
                 $("#monthlyIncome").addClass('is-invalid');
-                //return
+                return
             }
 
             // variable declaration
@@ -196,6 +197,11 @@ $(document).ready(function () {
                         var finalResult = stepDependent1 + stepDependent3 + stepDependent5 + stepDependent7;
                     }
                 }
+
+                // $("#grossMonthly").val(monthlyIncomeNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#annualTaxable").val(annualDependent.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#grossAnnual").val(annualIncomeNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                // $("#annualTax").val(finalResult.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
                 $("#grossMonthly").val(grossMonthlyNum.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 $("#grossAnnual").val((grossMonthlyNum*12).toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
