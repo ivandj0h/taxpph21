@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">SIMPLE - TAX Calculation</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">PPH21 - Calculation</a>
     </nav>
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mt-3">
-                <h3 class="mb-3">PERSONAL DATA</h3>
+            <div class="col-lg-4 col-md-12 mt-3">
+                <h2 class="mb-3">Personal</h2>
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -29,12 +29,13 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="biayaJabatan">Position Expenditure</label>
-                        <input type="text" class="form-control" id="biayaJabatan" placeholder="Position Expenditure..." readonly>
+                        <label for="biayaJabatan">Biaya Jabatan</label>
+                        <input type="text" class="form-control" id="biayaJabatan" placeholder="Biaya Jabatan..."
+                            autocomplete="off" readonly>
                     </div>
                     <div class="form-check mb-2">
                         <input type="checkbox" class="form-check-input" id="allowence">
-                        <label class="form-check-label" for="allowence">Allowence Checkbox</label>
+                        <label class="form-check-label" for="allowence">Allowence Check</label>
                     </div>
                     <div class="form-group">
                         <label for="status">Marital Status</label>
@@ -56,13 +57,13 @@
                         </select>
                     </div>
                 </form>
-                <div class="float-right">
+                <div class="float-right d-md-none d-lg-block">
                     <button id="calculate" class="btn btn-primary">Calculate</button>
                     <button id="reset" class="btn btn-warning ml-3">Reset</button>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-3">
-                <h3 class="mb-3">INCOME</h3>
+            <div class="col-lg-4 col-md-12 mt-3">
+                <h2 class="mb-3">Income</h2>
                 <form>
                     <div class="form-group">
                         <label for="monthlyIncome">Monthly Income</label>
@@ -70,13 +71,13 @@
                             autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label for="jkk">Work Accident Insurance</label>
-                        <input type="text" class="form-control" id="jkk" placeholder="Work Accident Insurance"
+                        <label for="jkk">Premi Jaminan Kecelakaan Kerja</label>
+                        <input type="text" class="form-control" id="jkk" placeholder="Jaminan Kecelakaan Kerja"
                             disabled>
                     </div>
                     <div class="form-group">
-                        <label for="jkm">Death Guarantee Insurance</label>
-                        <input type="text" class="form-control" id="jkm" placeholder="Death Guarantee Insurance"
+                        <label for="jkm">Premi Jaminan Kematian</label>
+                        <input type="text" class="form-control" id="jkm" placeholder="Jaminan Kecelakaan Kerja"
                             disabled>
                     </div>
                     <div class="form-group">
@@ -101,8 +102,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-4 col-md-6 mt-3">
-                <h3 class="mb-3">TAX CALCULATION</h3>
+            <div class="col-lg-4 col-md-12 mt-3">
+                <h2 class="mb-3">PPH21</h2>
                 <form>
                     <div class="form-group">
                         <label for="annualTaxable">Annual taxable income</label>
@@ -115,6 +116,12 @@
                     </div>
                 </form>
             </div>
+
+            <div class="col-lg-12 d-lg-none d-md-block">
+                <button id="calculate" class="btn btn-primary">Calculate</button>
+                <button id="reset" class="btn btn-warning ml-3">Reset</button>
+            </div>
+
         </div>
     </div>
 

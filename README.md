@@ -11,8 +11,6 @@
 
 ## EXAMPLE CASE
    To understand how it works, i'll give you two examples case.
-   
-      1. Tax Calc without adding Tax reliefs
       
          John Doe is an employee at DOE Corp, as an engineer he gets a salary of 25,000,000 every month.
          DOE Corp participates in the Employment BPJS program, Work Accident Insurance and Death Guarantee 
