@@ -3,7 +3,7 @@
                                                                              TECH_DEV_TEST_IVANDI DJOH GAH 
 
 ## ABOUT THE PROGRAM
-   This Program was made to Answer the Question of the Recruiters about Indonesia's Income Taxation. 
+   This Program was made to share about Indonesia's Income Taxation. 
    All of the Calculation on this Program based on Director General of Tax Regulation Number PER-32/PJ/2015 
    concerning Article 21 Income Tax, the definition of Income Tax 21 is a tax on income in the form of salary, 
    wages, honorarium, allowances and other payments in name and in any form relating to work or position, 
